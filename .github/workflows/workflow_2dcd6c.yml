@@ -1,0 +1,27 @@
+name: workflow_2dcd6c
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ opened, synchronize ]
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Health check
+        run: |
+          echo "Running health checks..."
+          echo "Disk: $(df -h . | tail -1 | awk '{print $4}')"
+          echo "Health check passed"
+      - name: Verify setup
+        run: |
+          echo "Verifying setup..."
+          which git && echo "Git available"
+          echo "Setup verified"

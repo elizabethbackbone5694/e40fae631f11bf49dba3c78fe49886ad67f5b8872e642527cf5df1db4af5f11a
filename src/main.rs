@@ -3,17 +3,17 @@ use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::time::SystemTime;
 
-/// File processor for project d673c5
-struct Processor_d673c5 {
+/// File processor for project edce77
+struct Processor_edce77 {
     base_dir: PathBuf,
     project_id: String,
 }
 
-impl Processor_d673c5 {
+impl Processor_edce77 {
     fn new(base_dir: impl AsRef<Path>) -> Self {
         Self {
             base_dir: base_dir.as_ref().to_path_buf(),
-            project_id: "d673c5".to_string(),
+            project_id: "edce77".to_string(),
         }
     }
 
@@ -58,7 +58,7 @@ impl Processor_d673c5 {
 
 fn main() -> io::Result<()> {
     let dir = std::env::args().nth(1).unwrap_or_else(|| ".".to_string());
-    let processor = Processor_d673c5::new(&dir);
+    let processor = Processor_edce77::new(&dir);
     let files = processor.scan_dir()?;
     println!("Found {} files in {}", files.len(), dir);
     let mut results = Vec::new();

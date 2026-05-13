@@ -1,4 +1,4 @@
-# file-processor-d673c5
+# file-processor-edce77
 
 A Rust file processing utility.
 
@@ -6,9 +6,9 @@ A Rust file processing utility.
 
 ```bash
 cargo build --release
-./target/release/file-processor-d673c5 /path/to/dir
+./target/release/file-processor-edce77 /path/to/dir
 ```
 
 ## Project ID
 
-`d673c5`
+`edce77`
